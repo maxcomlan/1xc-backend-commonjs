@@ -1,7 +1,6 @@
 import Axios from "axios";
-import { Admin } from "..";
-import { AdminWithRoles } from "..";
-import { ServiceMetadata } from "../peer-types";
+import { Admin, AdminWithRoles } from "..";
+import { ServiceMetadata } from "../peers";
 import { JsonServiceClient } from "./JsonServiceClient";
 
 export class AdminServiceClient extends JsonServiceClient<Admin>{

@@ -1,5 +1,5 @@
 import { BusinessProfile } from "..";
-import { ServiceMetadata } from "../peer-types";
+import { ServiceMetadata } from "../peers";
 import { JsonServiceClient } from "./JsonServiceClient";
 
 export class BusinessServiceClient extends JsonServiceClient<BusinessProfile>{

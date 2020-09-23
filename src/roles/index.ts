@@ -1,3 +1,4 @@
+
 type UserProfileScope = "user:profile:read"
                         |"user:profile:activate"
                         |"user:profile:block"

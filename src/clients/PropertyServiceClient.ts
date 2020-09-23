@@ -1,24 +1,19 @@
 import Axios from "axios";
-import { ServiceMetadata } from "../peer-types";
+import { SystemProperties } from "..";
+import { ServiceMetadata } from "../peers";
 import { ServiceClient } from "./ServiceClient";
 
-export interface AssetMetadata {
-    ext: string;
-    mime: string;
-    size: number;
-}
-
-export class AssetServiceClient extends ServiceClient{
+export class PropertyServiceClient extends ServiceClient{
     static clientMetadata: ServiceMetadata;
     static url: string;
 
     constructor(){
-        super(AssetServiceClient.url, AssetServiceClient.clientMetadata);
+        super(PropertyServiceClient.url, PropertyServiceClient.clientMetadata);
     }
 
-    async getMetadata(file: string):Promise<AssetMetadata|undefined>{
+    async read():Promise<SystemProperties | undefined>{
         return Axios.get(
-            `${this.url}/${file}/metadata`,
+            this.url,
             {
                 headers: {
                     'Service-Name': this.access.name,
@@ -27,7 +22,7 @@ export class AssetServiceClient extends ServiceClient{
             }
         )
         .then((res) => {
-            if(res.status === 200 && res.data.success){
+            if(res.data.success){
                 return res.data.data;
             }
             return undefined;

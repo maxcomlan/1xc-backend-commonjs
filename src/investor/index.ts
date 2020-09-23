@@ -2,7 +2,7 @@
  * @author Maximilien Comlan
  */
 
-import { Money } from ".";
+import { Money } from "..";
 
 export type ID = string;
 

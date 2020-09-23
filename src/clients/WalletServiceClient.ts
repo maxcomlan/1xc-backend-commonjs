@@ -1,6 +1,6 @@
 import Axios from "axios";
 import { Money, Wallet, WalletHistoryType } from "..";
-import { ServiceMetadata } from "../peer-types";
+import { ServiceMetadata } from "../peers";
 import { JsonServiceClient } from "./JsonServiceClient";
 
 

@@ -1,7 +1,7 @@
 {
   "name": "1xc-backend-common",
   "version": "1.0.0",
-  "description": "common properties of 1xc-subsystem-common",
+  "description": "common properties of 1xc subsystems written in javascript/typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

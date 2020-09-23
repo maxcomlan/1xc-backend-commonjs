@@ -20,3 +20,7 @@ export interface JsonKeyMatch{
 }
 
 export type SQLJoin = "AND" | "OR";
+
+export function rawToDoc(raw: RawDocument){
+    return JSON.parse(raw.data) as KeyValue;
+}

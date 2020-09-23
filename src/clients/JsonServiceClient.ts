@@ -1,6 +1,6 @@
 import Axios from "axios";
 import { KeyValue } from "..";
-import { ServiceMetadata } from "../peer-types";
+import { ServiceMetadata } from "../peers";
 import { ServiceClient } from "./ServiceClient";
 
 export class JsonServiceClient<Item = KeyValue, IndexedKey = string, CreationType = KeyValue, UpdateType = KeyValue> extends ServiceClient{

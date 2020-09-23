@@ -1,4 +1,4 @@
-import { ServiceMetadata } from "../peer-types";
+import { ServiceMetadata } from "../peers";
 import { AdminServiceClient } from "./AdminServiceClient";
 import { AssetServiceClient } from "./AssetServiceClient";
 import { BusinessServiceClient } from "./BusinessServiceClient";

@@ -1,6 +1,6 @@
 import Axios from "axios";
 import { ExchangeCalculation } from "..";
-import { ServiceMetadata } from "../peer-types";
+import { ServiceMetadata } from "../peers";
 import { ServiceClient } from "./ServiceClient";
 
 export class ConversionServiceClient extends ServiceClient{

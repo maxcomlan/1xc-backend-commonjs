@@ -1,6 +1,6 @@
 import { ServiceClient } from "./ServiceClient";
 import Axios from "axios";
-import { ServiceMetadata } from "../peer-types";
+import { ServiceMetadata } from "../peers";
 import { KeyValue } from "..";
 
 export class IssuerClient extends ServiceClient{

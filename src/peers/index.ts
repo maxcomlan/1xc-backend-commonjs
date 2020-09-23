@@ -1,4 +1,4 @@
-import { ScopedRole } from "./roles";
+import { ScopedRole } from "../roles";
 
 export interface ServiceMetadata{
     name: string,
