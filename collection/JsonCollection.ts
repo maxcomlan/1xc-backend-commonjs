@@ -48,7 +48,7 @@ export class JsonCollection<T extends KeyValue = KeyValue>{
                     reject(err);
                 }
                 if(res){
-                    resolve(this.rawToDocument(res))
+                    resolve(this.rawToDocument(res[0]))
                 }
                 resolve(undefined);
             })
