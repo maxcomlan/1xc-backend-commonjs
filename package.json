@@ -22,6 +22,7 @@
   "devDependencies": {
     "typescript": "^4.0.3"
   },
+  "files": ["dist"],
   "dependencies": {
     "@types/mysql": "^2.15.15",
     "@types/redis": "^2.8.27",  
