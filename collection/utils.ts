@@ -1,5 +1,3 @@
-
-
 export function success(data: any = undefined){
     let res: any = {
         success: true
