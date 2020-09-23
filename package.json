@@ -1,0 +1,21 @@
+{
+  "name": "1xc-backend-common",
+  "version": "1.0.0",
+  "description": "common properties of 1xc-subsystem-common",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "repository": "https://github.com/themx05/1xc-backend-common",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "@types/mysql": "^2.15.15",
+    "axios": "^0.20.0",
+    "mysql": "^2.18.1"
+  }
+}
