@@ -4,6 +4,7 @@
   "description": "common properties of 1xc subsystems written in javascript/typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+
   "scripts": {
     "prepublish": "npm run build",
     "preinstall": "npm run build",
@@ -23,7 +24,7 @@
   },
   "dependencies": {
     "@types/mysql": "^2.15.15",
-    "@types/redis": "^2.8.27",
+    "@types/redis": "^2.8.27",  
     "axios": "^0.20.0",
     "mysql": "^2.18.1",
     "redis": "^3.0.2"
