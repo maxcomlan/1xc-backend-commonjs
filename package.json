@@ -26,12 +26,12 @@
     "redis": "^3.0.2"
   },
   "exports":{
-    "./": "./lib",
-    "./clients": "./lib/clients",
-    "./collection": "./lib/collection",
-    "./investor": "./lib/investor",
-    "./peers": "./lib/peers",
-    "./roles": "./lib/roles"
+    "./clients/": "./lib/clients/",
+    "./collection/": "./lib/collection/",
+    "./investor/": "./lib/investor/",
+    "./peers/": "./lib/peers/",
+    "./roles/": "./lib/roles/",
+    "./": "./lib/"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
