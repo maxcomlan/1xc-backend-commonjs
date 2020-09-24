@@ -2,12 +2,9 @@
   "name": "1xc-backend-common",
   "version": "1.0.0",
   "description": "common properties of 1xc subsystems written in javascript/typescript",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-
   "scripts": {
     "prepublish": "npm run build",
-    "install": "npm run build",
+    "preinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
@@ -22,12 +19,14 @@
   "devDependencies": {
     "typescript": "^4.0.3"
   },
-  "files": ["dist"],
   "dependencies": {
     "@types/mysql": "^2.15.15",
     "@types/redis": "^2.8.27",  
     "axios": "^0.20.0",
     "mysql": "^2.18.1",
     "redis": "^3.0.2"
-  }
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": ["lib", "package.json"]
 }
