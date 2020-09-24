@@ -30,3 +30,5 @@ export class ConversionServiceClient extends ServiceClient{
         })
     }
 }
+
+export default ConversionServiceClient;

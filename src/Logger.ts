@@ -61,3 +61,6 @@ export class Logger{
         this.client.publish(this.channel, JSON.stringify(log));
     }
 }
+
+
+export default Logger;

@@ -29,3 +29,5 @@ export class PropertyServiceClient extends ServiceClient{
         })
     }
 }
+
+export default PropertyServiceClient;

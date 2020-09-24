@@ -34,3 +34,5 @@ export class AssetServiceClient extends ServiceClient{
         })
     }
 }
+
+export default AssetServiceClient;

@@ -49,3 +49,5 @@ export class IssuerClient extends ServiceClient{
         })
     }
 }
+
+export default IssuerClient;

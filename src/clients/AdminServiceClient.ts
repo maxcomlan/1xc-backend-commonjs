@@ -26,3 +26,5 @@ export class AdminServiceClient extends JsonServiceClient<Admin>{
         })
     }
 }
+
+export default AdminServiceClient;

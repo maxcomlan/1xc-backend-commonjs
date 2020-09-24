@@ -12,3 +12,5 @@ export class ServiceClient{
         this.access = access;
     }
 }
+
+export default ServiceClient;

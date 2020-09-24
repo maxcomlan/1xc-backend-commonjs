@@ -10,3 +10,5 @@ export class UserServiceClient extends JsonServiceClient<Customer>{
         super(UserServiceClient.url, UserServiceClient.clientMetadata);
     }
 }
+
+export default UserServiceClient;

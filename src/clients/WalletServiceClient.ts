@@ -81,3 +81,5 @@ export class WalletServiceClient extends JsonServiceClient<Wallet>{
         })
     }
 }
+
+export default WalletServiceClient;

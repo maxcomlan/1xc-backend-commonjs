@@ -114,3 +114,5 @@ export class JsonCollection<T extends KeyValue = KeyValue>{
         }
     }
 }
+
+export default JsonCollection;

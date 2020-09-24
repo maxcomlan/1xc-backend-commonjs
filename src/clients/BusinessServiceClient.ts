@@ -10,3 +10,5 @@ export class BusinessServiceClient extends JsonServiceClient<BusinessProfile>{
         super(BusinessServiceClient.url, BusinessServiceClient.clientMetadata);
     }
 }
+
+export default BusinessServiceClient;

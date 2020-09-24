@@ -24,3 +24,5 @@ export class JsonDocFilter{
         return this.filters.map((w) => w.value);
     }
 }
+
+export default JsonDocFilter;
