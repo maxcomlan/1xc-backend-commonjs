@@ -4,7 +4,6 @@
   "description": "common properties of 1xc subsystems written in javascript/typescript",
   "scripts": {
     "prepublish": "npm run build",
-    "install": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
