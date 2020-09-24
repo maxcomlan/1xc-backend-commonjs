@@ -25,6 +25,9 @@
     "mysql": "^2.18.1",
     "redis": "^3.0.2"
   },
+  "exports":{
+    "./": "./lib/"
+  },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": ["lib", "package.json"]
