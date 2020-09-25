@@ -227,7 +227,6 @@ export interface ExchangeCalculation{
     rateApplied: number;
 }
 
-
 export * from './Logger';
 export * from './clients';
 export * from './collection';
