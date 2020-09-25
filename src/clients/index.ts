@@ -8,6 +8,7 @@ import { PropertyServiceClient } from "./PropertyServiceClient";
 import { UserServiceClient } from "./UserServiceClient";
 import { WalletServiceClient } from "./WalletServiceClient";
 
+
 /**
  * Setup proxy url of every client available.
  * @param url - the base url of the proxy that interconnects queryable rest apis of services
@@ -43,3 +44,15 @@ export function configureProxyAccess(url: string, meta: ServiceMetadata){
     configureProxyEndpoint(url);
     configureClientMetadata(meta);
 }
+
+
+export { AdminServiceClient } from "./AdminServiceClient";
+export { AssetServiceClient } from "./AssetServiceClient";
+export { BusinessServiceClient } from "./BusinessServiceClient";
+export { ConversionServiceClient } from "./ConversionServiceClient";
+export { IssuerClient } from "./IssuerClient";
+export { PropertyServiceClient } from "./PropertyServiceClient";
+export { UserServiceClient } from "./UserServiceClient";
+export { WalletServiceClient } from "./WalletServiceClient";
+export { ServiceAccess, ServiceClient } from "./ServiceClient";
+export { JsonServiceClient } from "./JsonServiceClient";

@@ -7,3 +7,4 @@ export declare class ConversionServiceClient extends ServiceClient {
     constructor();
     getRate(from: string, to: string): Promise<ExchangeCalculation | undefined>;
 }
+export default ConversionServiceClient;

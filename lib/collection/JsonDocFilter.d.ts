@@ -6,3 +6,4 @@ export declare class JsonDocFilter {
     get where(): string;
     get keys(): any[];
 }
+export default JsonDocFilter;

@@ -24,3 +24,6 @@ export type SQLJoin = "AND" | "OR";
 export function rawToDoc(raw: RawDocument){
     return JSON.parse(raw.data) as KeyValue;
 }
+
+export { JsonCollection } from "./JsonCollection";
+export { JsonDocFilter } from "./JsonDocFilter";

@@ -99,6 +99,3 @@ export class JsonServiceClient<Item = KeyValue, IndexedKey = string, CreationTyp
         })
     }
 }
-
-
-export default JsonServiceClient;

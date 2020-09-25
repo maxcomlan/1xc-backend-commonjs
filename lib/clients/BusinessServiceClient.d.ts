@@ -6,3 +6,4 @@ export declare class BusinessServiceClient extends JsonServiceClient<BusinessPro
     static url: string;
     constructor();
 }
+export default BusinessServiceClient;

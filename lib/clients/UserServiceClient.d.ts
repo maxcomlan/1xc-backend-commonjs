@@ -6,3 +6,4 @@ export declare class UserServiceClient extends JsonServiceClient<Customer> {
     static url: string;
     constructor();
 }
+export default UserServiceClient;

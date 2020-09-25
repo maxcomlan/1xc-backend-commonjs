@@ -12,4 +12,4 @@ export declare class WalletServiceClient extends JsonServiceClient<Wallet> {
     debit(wallet: string, money: Money, memo: string, type?: WalletHistoryType): Promise<CreditOrDebitResult | undefined>;
     credit(wallet: string, money: Money, memo: string, type?: WalletHistoryType): Promise<CreditOrDebitResult | undefined>;
 }
-export {};
+export default WalletServiceClient;

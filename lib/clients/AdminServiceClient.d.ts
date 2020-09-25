@@ -7,3 +7,4 @@ export declare class AdminServiceClient extends JsonServiceClient<Admin> {
     constructor();
     readWithRole(id: string): Promise<AdminWithRoles>;
 }
+export default AdminServiceClient;

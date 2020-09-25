@@ -7,3 +7,4 @@ export declare class PropertyServiceClient extends ServiceClient {
     constructor();
     read(): Promise<SystemProperties | undefined>;
 }
+export default PropertyServiceClient;

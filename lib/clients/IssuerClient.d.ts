@@ -8,3 +8,4 @@ export declare class IssuerClient extends ServiceClient {
     sign(data: KeyValue): Promise<string>;
     verify(token: string): Promise<KeyValue>;
 }
+export default IssuerClient;

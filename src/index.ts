@@ -225,3 +225,5 @@ export interface ExchangeCalculation{
     converted: number;
     rateApplied: number;
 }
+
+export { Logger } from "./Logger";

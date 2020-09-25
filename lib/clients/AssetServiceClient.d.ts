@@ -11,3 +11,4 @@ export declare class AssetServiceClient extends ServiceClient {
     constructor();
     getMetadata(file: string): Promise<AssetMetadata | undefined>;
 }
+export default AssetServiceClient;

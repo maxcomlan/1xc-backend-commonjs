@@ -191,4 +191,4 @@ export interface ExchangeCalculation {
     converted: number;
     rateApplied: number;
 }
-export {};
+export { Logger } from "./Logger";
