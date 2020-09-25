@@ -32,6 +32,7 @@
     "./lib/investor": "./lib/investor/index",
     "./lib/peers": "./lib/peers/index",
     "./lib/roles": "./lib/roles/index",
+    "./lib/utils": "./lib/utils",
     ".": "./lib/index",
     "./lib": "./lib/index",
     "./lib/": "./lib/"
