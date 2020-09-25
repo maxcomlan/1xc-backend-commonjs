@@ -3,7 +3,7 @@
   "version": "1.1.1",
   "description": "common properties of 1xc subsystems written in javascript/typescript",
   "scripts": {
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
@@ -26,13 +26,14 @@
     "redis": "^3.0.2"
   },
   "exports":{
-    "./clients": "./lib/clients/index",
-    "./collection/utils": "./lib/collection/utils",
-    "./collection": "./lib/collection/index",
-    "./investor": "./lib/investor/index",
-    "./peers": "./lib/peers/index",
-    "./roles": "./lib/roles/index",
+    "./lib/clients": "./lib/clients/index",
+    "./lib/collection/utils": "./lib/collection/utils",
+    "./lib/collection": "./lib/collection/index",
+    "./lib/investor": "./lib/investor/index",
+    "./lib/peers": "./lib/peers/index",
+    "./lib/roles": "./lib/roles/index",
     ".": "./lib/index",
+    "./lib": "./lib/index",
     "./lib/": "./lib/"
   },
   "main": "lib/index.js",
