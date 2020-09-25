@@ -29,7 +29,7 @@
     ".": "./core/index",
     "./core": "./core/index"
   },
-  "main": "core/index.js",
-  "types": "core/index.d.ts",
+  "main": "./core/index.js",
+  "types": "./core/index.d.ts",
   "files": ["core/"]
 }
