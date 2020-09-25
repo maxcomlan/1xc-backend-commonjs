@@ -32,8 +32,8 @@
     "./investor": "./lib/investor/index",
     "./peers": "./lib/peers/index",
     "./roles": "./lib/roles/index",
-
-    ".": "./lib/index"
+    ".": "./lib/index",
+    "./lib/": "./lib/"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
