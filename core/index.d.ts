@@ -191,4 +191,10 @@ export interface ExchangeCalculation {
     converted: number;
     rateApplied: number;
 }
-export { Logger } from "./Logger";
+export * from './Logger';
+export * from './clients';
+export * from './collection';
+export * from './investor';
+export * from './peers';
+export * from './roles';
+export * from './utils';

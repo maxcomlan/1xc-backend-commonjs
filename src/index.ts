@@ -1,4 +1,5 @@
 import { NetworkRule } from "./investor";
+import { Logger } from "./Logger";
 import { ScopedRole } from "./roles";
 
 interface Indexable{
@@ -226,4 +227,11 @@ export interface ExchangeCalculation{
     rateApplied: number;
 }
 
-export { Logger } from "./Logger";
+
+export * from './Logger';
+export * from './clients';
+export * from './collection';
+export * from './investor';
+export * from './peers';
+export * from './roles';
+export * from './utils';

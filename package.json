@@ -26,18 +26,10 @@
     "redis": "^3.0.2"
   },
   "exports":{
-    "./lib/clients": "./lib/clients/index",
-    "./lib/collection/utils": "./lib/collection/utils",
-    "./lib/collection": "./lib/collection/index",
-    "./lib/investor": "./lib/investor/index",
-    "./lib/peers": "./lib/peers/index",
-    "./lib/roles": "./lib/roles/index",
-    "./lib/utils": "./lib/utils",
-    ".": "./lib/index",
-    "./lib": "./lib/index",
-    "./lib/": "./lib/"
+    ".": "./core/index",
+    "./core": "./core/index"
   },
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "files": ["lib", "package.json"]
+  "main": "core/index.js",
+  "types": "core/index.d.ts",
+  "files": ["core", "package.json"]
 }
