@@ -1,6 +1,16 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.JsonServiceClient = exports.ServiceClient = exports.WalletServiceClient = exports.UserServiceClient = exports.PropertyServiceClient = exports.IssuerClient = exports.ConversionServiceClient = exports.BusinessServiceClient = exports.AssetServiceClient = exports.AdminServiceClient = exports.configureProxyAccess = exports.configureClientMetadata = exports.configureProxyEndpoint = void 0;
+exports.configureProxyAccess = exports.configureClientMetadata = exports.configureProxyEndpoint = void 0;
 const AdminServiceClient_1 = require("./AdminServiceClient");
 const AssetServiceClient_1 = require("./AssetServiceClient");
 const BusinessServiceClient_1 = require("./BusinessServiceClient");
@@ -44,23 +54,13 @@ function configureProxyAccess(url, meta) {
     configureClientMetadata(meta);
 }
 exports.configureProxyAccess = configureProxyAccess;
-var AdminServiceClient_2 = require("./AdminServiceClient");
-Object.defineProperty(exports, "AdminServiceClient", { enumerable: true, get: function () { return AdminServiceClient_2.AdminServiceClient; } });
-var AssetServiceClient_2 = require("./AssetServiceClient");
-Object.defineProperty(exports, "AssetServiceClient", { enumerable: true, get: function () { return AssetServiceClient_2.AssetServiceClient; } });
-var BusinessServiceClient_2 = require("./BusinessServiceClient");
-Object.defineProperty(exports, "BusinessServiceClient", { enumerable: true, get: function () { return BusinessServiceClient_2.BusinessServiceClient; } });
-var ConversionServiceClient_2 = require("./ConversionServiceClient");
-Object.defineProperty(exports, "ConversionServiceClient", { enumerable: true, get: function () { return ConversionServiceClient_2.ConversionServiceClient; } });
-var IssuerClient_2 = require("./IssuerClient");
-Object.defineProperty(exports, "IssuerClient", { enumerable: true, get: function () { return IssuerClient_2.IssuerClient; } });
-var PropertyServiceClient_2 = require("./PropertyServiceClient");
-Object.defineProperty(exports, "PropertyServiceClient", { enumerable: true, get: function () { return PropertyServiceClient_2.PropertyServiceClient; } });
-var UserServiceClient_2 = require("./UserServiceClient");
-Object.defineProperty(exports, "UserServiceClient", { enumerable: true, get: function () { return UserServiceClient_2.UserServiceClient; } });
-var WalletServiceClient_2 = require("./WalletServiceClient");
-Object.defineProperty(exports, "WalletServiceClient", { enumerable: true, get: function () { return WalletServiceClient_2.WalletServiceClient; } });
-var ServiceClient_1 = require("./ServiceClient");
-Object.defineProperty(exports, "ServiceClient", { enumerable: true, get: function () { return ServiceClient_1.ServiceClient; } });
-var JsonServiceClient_1 = require("./JsonServiceClient");
-Object.defineProperty(exports, "JsonServiceClient", { enumerable: true, get: function () { return JsonServiceClient_1.JsonServiceClient; } });
+__exportStar(require("./AdminServiceClient"), exports);
+__exportStar(require("./AssetServiceClient"), exports);
+__exportStar(require("./BusinessServiceClient"), exports);
+__exportStar(require("./ConversionServiceClient"), exports);
+__exportStar(require("./IssuerClient"), exports);
+__exportStar(require("./PropertyServiceClient"), exports);
+__exportStar(require("./UserServiceClient"), exports);
+__exportStar(require("./WalletServiceClient"), exports);
+__exportStar(require("./ServiceClient"), exports);
+__exportStar(require("./JsonServiceClient"), exports);

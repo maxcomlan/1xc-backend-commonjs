@@ -16,5 +16,5 @@ export interface JsonKeyMatch {
 }
 export declare type SQLJoin = "AND" | "OR";
 export declare function rawToDoc(raw: RawDocument): KeyValue;
-export { JsonCollection } from "./JsonCollection";
-export { JsonDocFilter } from "./JsonDocFilter";
+export * from "./JsonCollection";
+export * from "./JsonDocFilter";

@@ -1,11 +1,19 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.JsonDocFilter = exports.JsonCollection = exports.rawToDoc = void 0;
+exports.rawToDoc = void 0;
 function rawToDoc(raw) {
     return JSON.parse(raw.data);
 }
 exports.rawToDoc = rawToDoc;
-var JsonCollection_1 = require("./JsonCollection");
-Object.defineProperty(exports, "JsonCollection", { enumerable: true, get: function () { return JsonCollection_1.JsonCollection; } });
-var JsonDocFilter_1 = require("./JsonDocFilter");
-Object.defineProperty(exports, "JsonDocFilter", { enumerable: true, get: function () { return JsonDocFilter_1.JsonDocFilter; } });
+__exportStar(require("./JsonCollection"), exports);
+__exportStar(require("./JsonDocFilter"), exports);
