@@ -7,7 +7,7 @@ declare type SystemMethodScope = "system:method:read" | "system:method:create" |
 declare type SystemMethodAccountScope = "system:methodaccount:read" | "system:methodaccount:create" | "system:methodaccount:update" | "system:methodaccount:delete" | "system:methodaccount:.*";
 declare type SystemPropertyScope = "system:property:read" | "system:property:update" | "system:property:.*";
 declare type SystemAdminScope = "system:admin:read" | "system:admin:create" | "system:admin:disable" | "system:admin:enable" | "system:admin:.*";
-declare type AdminRoleScope = "admin:role:read" | "admin:role:update" | "admin:role:*";
+declare type AdminRoleScope = "admin:role:read" | "admin:role:update" | "admin:role:.*";
 declare type SystemEventScope = "system:event:read";
 declare type SystemLogScope = "system:log:read";
 export declare type UserScope = UserProfileScope | UserBusinessScope | "user:.*:.*";
@@ -17,6 +17,7 @@ export interface UserRole {
     id: string;
     roles: ScopedRole[];
 }
+export declare const ScopedRoleList: ScopedRole[];
 export declare function userHasRole(needle: ScopedRole, haystack: ScopedRole[]): boolean;
 export declare function userHasMultiRoles(needles: ScopedRole[], haystack: ScopedRole[]): boolean;
 export {};
