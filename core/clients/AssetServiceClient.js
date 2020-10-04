@@ -24,6 +24,20 @@ class AssetServiceClient extends ServiceClient_1.ServiceClient {
             return undefined;
         });
     }
+    async removeFile(file) {
+        return axios_1.default.delete(`${this.url}/${file}`, {
+            headers: {
+                'Service-Name': this.access.name,
+                'Service-Signature': this.access.signature
+            }
+        })
+            .then((res) => {
+            if (res.status === 200 && res.data.success) {
+                return true;
+            }
+            return false;
+        });
+    }
 }
 exports.AssetServiceClient = AssetServiceClient;
 exports.default = AssetServiceClient;

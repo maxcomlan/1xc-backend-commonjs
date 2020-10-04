@@ -33,6 +33,24 @@ export class AssetServiceClient extends ServiceClient{
             return undefined;
         })
     }
+
+    async removeFile(file: string):Promise<boolean>{
+        return Axios.delete(
+            `${this.url}/${file}`,
+            {
+                headers: {
+                    'Service-Name': this.access.name,
+                    'Service-Signature': this.access.signature
+                }
+            }
+        )
+        .then((res) => {
+            if(res.status === 200 && res.data.success){
+                return true;
+            }
+            return false;
+        })
+    }
 }
 
 export default AssetServiceClient;

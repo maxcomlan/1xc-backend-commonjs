@@ -10,5 +10,6 @@ export declare class AssetServiceClient extends ServiceClient {
     static url: string;
     constructor();
     getMetadata(file: string): Promise<AssetMetadata | undefined>;
+    removeFile(file: string): Promise<boolean>;
 }
 export default AssetServiceClient;

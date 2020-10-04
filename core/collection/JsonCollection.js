@@ -38,7 +38,7 @@ class JsonCollection {
                 if (err) {
                     reject(err);
                 }
-                if (res) {
+                if (res && res.length && res.length > 0) {
                     resolve(this.rawToDocument(res[0]));
                 }
                 resolve(undefined);
@@ -47,12 +47,12 @@ class JsonCollection {
     }
     async readOneWhere(filter = new JsonDocFilter_1.JsonDocFilter()) {
         return new Promise((resolve, reject) => {
-            this.db.query(`SELECT * FROM ${this.table} ${filter.where}`, filter.keys, (err, row) => {
+            this.db.query(`SELECT * FROM ${this.table} ${filter.where}`, filter.keys, (err, res) => {
                 if (err) {
                     reject(err);
                 }
-                if (row && row.length > 0) {
-                    resolve(this.rawToDocument(row[0]));
+                if (res && res.length && res.length > 0) {
+                    resolve(this.rawToDocument(res[0]));
                 }
                 resolve(undefined);
             });
