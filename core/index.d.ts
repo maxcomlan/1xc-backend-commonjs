@@ -157,8 +157,8 @@ export interface Ticket extends Indexable {
     amount: number;
     rate: number;
     address: string;
-    allowed: number | string;
-    enableCommission: number | string;
+    allowed: boolean;
+    enableCommission: boolean;
     status: TicketStatus;
     emissionDate: number;
     confirmedAt?: number;
