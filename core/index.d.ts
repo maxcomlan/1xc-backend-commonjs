@@ -185,8 +185,6 @@ export interface Transaction extends Indexable, Insertable {
     status: TxStatus;
     insertedAt: number;
     validatedAt?: number;
-    confirmedAt?: number;
-    paidAt: number;
 }
 export interface ExchangeCalculation {
     source: string;
