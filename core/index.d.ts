@@ -172,7 +172,7 @@ export interface TicketPayment extends Indexable, Money {
     paymentUrl: string;
 }
 export declare type TxType = "in" | "out";
-export declare type TxStatus = "pending" | "done" | "confirmed" | "paid";
+export declare type TxStatus = "pending" | "done";
 export interface Transaction extends Indexable, Insertable {
     ticketId: string;
     variant: TxType;
