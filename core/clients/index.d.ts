@@ -16,6 +16,8 @@ export * from "./BusinessServiceClient";
 export * from "./ConversionServiceClient";
 export * from "./IssuerClient";
 export * from "./PropertyServiceClient";
+export * from "./MethodServiceClient";
+export * from "./MethodAccountServiceClient";
 export * from "./UserServiceClient";
 export * from "./WalletServiceClient";
 export * from "./ServiceClient";
