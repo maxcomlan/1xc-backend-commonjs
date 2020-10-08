@@ -205,6 +205,7 @@ export interface TicketPayment extends Indexable, Money{
 }
 
 export type TxType = "in" | "out";
+export type TxStatus = "done" | "confirmed" | "paid";
 
 export interface Transaction extends Indexable, Insertable{
     ticketId: string;
@@ -215,7 +216,11 @@ export interface Transaction extends Indexable, Insertable{
     source: string;
     dest: string;
     reference: string;
-    timestamp: number;
+    status: TxStatus;
+    insertedAt: number;
+    validatedAt? : number;
+    confirmedAt?: number;
+    paidAt: number;
 }
 
 export interface ExchangeCalculation{
