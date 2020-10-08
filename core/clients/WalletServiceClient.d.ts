@@ -9,6 +9,7 @@ export declare class WalletServiceClient extends JsonServiceClient<Wallet> {
     static url: string;
     constructor();
     readMainWallet(userId: string): Promise<Wallet | undefined>;
+    readBusinessWallet(userId: string): Promise<Wallet | undefined>;
     debit(wallet: string, money: Money, memo: string, type?: WalletHistoryType): Promise<CreditOrDebitResult | undefined>;
     credit(wallet: string, money: Money, memo: string, type?: WalletHistoryType): Promise<CreditOrDebitResult | undefined>;
 }

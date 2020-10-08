@@ -31,6 +31,21 @@ export class WalletServiceClient extends JsonServiceClient<Wallet>{
         })
     }
 
+    async readBusinessWallet(userId: string):Promise<Wallet|undefined>{
+        return Axios.get(
+            this.url+`/?user=${userId}&business=true`,
+            {
+                headers: this.defaultHeaders
+            }
+        )
+        .then((res) => {
+            if(res.data.success){
+                return res.data.data[0] || undefined;
+            }
+            return undefined;
+        })
+    }
+
     async debit(wallet: string, money: Money, memo: string, type: WalletHistoryType = "normal"){
         let toPost = {
             ...money,

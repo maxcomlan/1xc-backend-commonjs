@@ -21,6 +21,17 @@ class WalletServiceClient extends JsonServiceClient_1.JsonServiceClient {
             return undefined;
         });
     }
+    async readBusinessWallet(userId) {
+        return axios_1.default.get(this.url + `/?user=${userId}&business=true`, {
+            headers: this.defaultHeaders
+        })
+            .then((res) => {
+            if (res.data.success) {
+                return res.data.data[0] || undefined;
+            }
+            return undefined;
+        });
+    }
     async debit(wallet, money, memo, type = "normal") {
         let toPost = {
             ...money,
