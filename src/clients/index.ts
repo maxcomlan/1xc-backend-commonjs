@@ -22,7 +22,7 @@ export function configureProxyEndpoint(url: string){
     ConversionServiceClient.url = url+"/rates";
     IssuerClient.url = url+"/issuer";
     PropertyServiceClient.url = url+'/system/properties';
-    MethodServiceClient.url = url+'system/methods';
+    MethodServiceClient.url = url+'/system/methods';
     MethodAccountServiceClient.url = url+'/system/methodaccounts';
     UserServiceClient.url = url+'/users';
     WalletServiceClient.url = url+'/wallets';
