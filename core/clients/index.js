@@ -36,7 +36,7 @@ function configureProxyEndpoint(url) {
     IssuerClient_1.IssuerClient.url = url + "/issuer";
     PropertyServiceClient_1.PropertyServiceClient.url = url + '/system/properties';
     MethodServiceClient_1.default.url = url + '/system/methods';
-    MethodAccountServiceClient_1.MethodAccountServiceClient.url = url + '/system/methodaccounts';
+    MethodAccountServiceClient_1.MethodAccountServiceClient.url = url + '/system/accounts';
     UserServiceClient_1.UserServiceClient.url = url + '/users';
     WalletServiceClient_1.WalletServiceClient.url = url + '/wallets';
 }
