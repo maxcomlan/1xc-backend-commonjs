@@ -59,4 +59,4 @@ export class MethodAccountServiceClient extends JsonServiceClient<MethodAccount>
     }
 }
 
-export default MethodServiceClient;
+export default MethodAccountServiceClient;
