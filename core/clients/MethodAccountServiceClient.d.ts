@@ -10,4 +10,4 @@ export declare class MethodAccountServiceClient extends JsonServiceClient<Method
     getFirstPerfectMoney(): Promise<PerfectMoneyAccount | undefined>;
     getFirstFedaPay(): Promise<FedaPayAccount | undefined>;
 }
-export default MethodServiceClient;
+export default MethodAccountServiceClient;

@@ -52,4 +52,4 @@ class MethodAccountServiceClient extends JsonServiceClient_1.JsonServiceClient {
     }
 }
 exports.MethodAccountServiceClient = MethodAccountServiceClient;
-exports.default = MethodServiceClient;
+exports.default = MethodAccountServiceClient;
