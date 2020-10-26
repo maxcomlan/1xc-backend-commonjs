@@ -230,6 +230,18 @@ export interface ExchangeCalculation{
     rateApplied: number;
 }
 
+export interface AccessToken extends Insertable, Patchable{
+    id: string;
+    hash: string;
+    owner: {
+        type: "user" | "admin";
+        id: string;
+    };
+    rules: [
+        "any:any:any"
+    ];
+}
+
 export * from './Logger';
 export * from './clients';
 export * from './collection';
