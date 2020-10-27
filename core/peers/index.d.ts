@@ -1,4 +1,5 @@
 import { ScopedRole } from "../roles";
+import { AccessToken } from "..";
 export interface ServiceMetadata {
     name: string;
     signature: string;
@@ -8,15 +9,23 @@ export interface ServiceMetadata {
 export declare type TokenType = "user" | "admin";
 export interface TokenData {
     type: TokenType;
+    method: "ses" | "uat";
 }
-export interface UserTokenData extends TokenData {
+export interface UserSESTokenData extends TokenData {
     type: "user";
+    method: "ses";
     userId: string;
     firstName: string;
     lastName: string;
 }
+export interface UserUATTokenData extends TokenData {
+    type: "user";
+    method: "uat";
+    token: AccessToken;
+}
 export interface AdminTokenData extends TokenData {
     type: "admin";
+    method: "ses";
     userId: string;
     firstName: string;
     lastName: string;
@@ -33,7 +42,7 @@ interface ServicePeer extends BasePeer {
 }
 interface UserPeer extends BasePeer {
     type: "user";
-    data: UserTokenData;
+    data: UserSESTokenData | UserUATTokenData;
 }
 interface AdminPeer extends BasePeer {
     type: "admin";
