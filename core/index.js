@@ -17,3 +17,4 @@ __exportStar(require("./investor"), exports);
 __exportStar(require("./peers"), exports);
 __exportStar(require("./roles"), exports);
 __exportStar(require("./utils"), exports);
+__exportStar(require("./middlewares/index"), exports);

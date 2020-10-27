@@ -11,16 +11,19 @@ export interface TokenData {
     type: TokenType;
     method: "ses" | "uat";
 }
-export interface UserSESTokenData extends TokenData {
+export interface UserSESData extends TokenData {
     type: "user";
     method: "ses";
     userId: string;
     firstName: string;
     lastName: string;
 }
-export interface UserUATTokenData extends TokenData {
+export interface UserUATData extends TokenData {
     type: "user";
     method: "uat";
+    userId: string;
+    firstName: string;
+    lastName: string;
     token: AccessToken;
 }
 export interface AdminTokenData extends TokenData {
@@ -42,7 +45,7 @@ interface ServicePeer extends BasePeer {
 }
 interface UserPeer extends BasePeer {
     type: "user";
-    data: UserSESTokenData | UserUATTokenData;
+    data: UserSESData | UserUATData;
 }
 interface AdminPeer extends BasePeer {
     type: "admin";

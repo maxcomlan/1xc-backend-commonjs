@@ -206,3 +206,4 @@ export * from './investor';
 export * from './peers';
 export * from './roles';
 export * from './utils';
+export * from './middlewares/index';

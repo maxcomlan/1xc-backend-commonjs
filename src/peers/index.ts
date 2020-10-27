@@ -15,7 +15,7 @@ export interface TokenData{
     method: "ses" | "uat"; // Authentication through session or authentication through user access token
 }
 
-export interface UserSESTokenData extends TokenData{
+export interface UserSESData extends TokenData{
     type: "user";
     method: "ses";
     userId: string;
@@ -23,9 +23,12 @@ export interface UserSESTokenData extends TokenData{
     lastName: string;
 }
 
-export interface UserUATTokenData extends TokenData{
+export interface UserUATData extends TokenData{
     type: "user";
     method: "uat";
+    userId: string;
+    firstName: string;
+    lastName: string;
     token: AccessToken;
 }
 
@@ -52,7 +55,7 @@ interface ServicePeer extends BasePeer{
 
 interface UserPeer extends BasePeer{
     type: "user";
-    data: UserSESTokenData | UserUATTokenData;
+    data: UserSESData | UserUATData;
 }
 
 interface AdminPeer extends BasePeer{
