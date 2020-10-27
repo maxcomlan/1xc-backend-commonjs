@@ -233,9 +233,7 @@ export interface ExchangeCalculation{
 export interface AccessToken extends Insertable, Patchable{
     hash: string; /// sha-256 of the generated key
     owner: string; /// the user id
-    rules: [
-        "any:any:any"
-    ];
+    rules: string[];
 }
 
 export * from './Logger';

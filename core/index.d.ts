@@ -197,9 +197,7 @@ export interface ExchangeCalculation {
 export interface AccessToken extends Insertable, Patchable {
     hash: string;
     owner: string;
-    rules: [
-        "any:any:any"
-    ];
+    rules: string[];
 }
 export * from './Logger';
 export * from './clients';
