@@ -231,7 +231,6 @@ export interface ExchangeCalculation{
 }
 
 export interface AccessToken extends Insertable, Patchable{
-    id: string;
     hash: string; /// sha-256 of the generated key
     owner: string; /// the user id
     rules: [
