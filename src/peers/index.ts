@@ -1,6 +1,9 @@
 import { ScopedRole } from "../roles";
 import { AccessToken } from "..";
 
+export const SESSION_TOKEN_PREFIX = "ses__";
+export const UAT_TOKEN_PREFIX = "uat__";
+
 export interface ServiceMetadata{
     name: string,
     signature: string,
