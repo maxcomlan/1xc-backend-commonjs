@@ -234,11 +234,22 @@ export interface ExchangeCalculation{
     rateApplied: number;
 }
 
+export interface AccessToken extends Insertable, Patchable{
+    hash: string; /// sha-256 of the generated key
+    owner: string; /// the user id
+    rules: string[];
+}
+
 export * from './Logger';
 export * from './clients';
 export * from './collection';
 export * from './investor';
 export * from './peers';
 export * from './roles';
+<<<<<<< HEAD
 export * from "./resumes";
 export * from './utils';
+=======
+export * from './utils';
+export * from './middlewares/index';
+>>>>>>> a3aac6dedb8a6fff39bcff17f0e536090e85ce75

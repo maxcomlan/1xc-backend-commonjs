@@ -1,4 +1,8 @@
 import { ScopedRole } from "../roles";
+import { AccessToken } from "..";
+
+export const SESSION_TOKEN_PREFIX = "ses__";
+export const UAT_TOKEN_PREFIX = "uat__";
 
 export interface ServiceMetadata{
     name: string,
@@ -7,21 +11,33 @@ export interface ServiceMetadata{
     port: number
 }
 
-export type TokenType = "user" | "admin";
+export type TokenType = "user" | "admin"; // uat = User Access Token; ses = Session
 
 export interface TokenData{
     type: TokenType;
+    method: "ses" | "uat"; // Authentication through session or authentication through user access token
 }
 
-export interface UserTokenData extends TokenData{
+export interface UserSESData extends TokenData{
     type: "user";
+    method: "ses";
     userId: string;
     firstName: string;
     lastName: string;
 }
 
+export interface UserUATData extends TokenData{
+    type: "user";
+    method: "uat";
+    userId: string;
+    firstName: string;
+    lastName: string;
+    token: AccessToken;
+}
+
 export interface AdminTokenData extends TokenData{
     type: "admin";
+    method: "ses";
     userId: string;
     firstName: string;
     lastName: string;
@@ -42,7 +58,7 @@ interface ServicePeer extends BasePeer{
 
 interface UserPeer extends BasePeer{
     type: "user";
-    data: UserTokenData;
+    data: UserSESData | UserUATData;
 }
 
 interface AdminPeer extends BasePeer{

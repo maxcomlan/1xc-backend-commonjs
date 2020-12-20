@@ -197,6 +197,11 @@ export interface ExchangeCalculation {
     converted: number;
     rateApplied: number;
 }
+export interface AccessToken extends Insertable, Patchable {
+    hash: string;
+    owner: string;
+    rules: string[];
+}
 export * from './Logger';
 export * from './clients';
 export * from './collection';
@@ -205,3 +210,4 @@ export * from './peers';
 export * from './roles';
 export * from "./resumes";
 export * from './utils';
+export * from './middlewares/index';
