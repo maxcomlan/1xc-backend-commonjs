@@ -1,3 +1,6 @@
+import { Customer, Wallet } from ".";
+import { UserResume, WalletResume } from "./resumes";
+
 export function success(data: any = undefined){
     let res: any = {
         success: true

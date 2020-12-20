@@ -112,7 +112,7 @@ export interface BusinessProfile extends Indexable, Insertable, Patchable {
     verificationDate?: number;
     status: BusinessProfileStatus;
 }
-export declare type MethodCategory = "banking" | "mobile" | "transfer" | "cryptocurrency";
+export declare type MethodCategory = "banking" | "card" | "mobile" | "transfer" | "cryptocurrency";
 export interface AmountLimitation {
     minAmount: number;
     maxAmount: number;
@@ -134,9 +134,12 @@ export interface MobileDetails extends AmountLimitation {
 export interface TransferDetails extends AmountLimitation {
     currency: string;
 }
+export interface CardDetails extends AmountLimitation {
+    curency: string;
+}
 export interface CryptoCurrencyDetails extends AmountLimitation {
 }
-export declare type MethodDetails = BankingDetails | MobileDetails | TransferDetails | CryptoCurrencyDetails;
+export declare type MethodDetails = BankingDetails | MobileDetails | TransferDetails | CardDetails | CryptoCurrencyDetails;
 export interface Method extends Indexable, Insertable, Patchable {
     category: MethodCategory;
     type: string;
@@ -200,4 +203,5 @@ export * from './collection';
 export * from './investor';
 export * from './peers';
 export * from './roles';
+export * from "./resumes";
 export * from './utils';
