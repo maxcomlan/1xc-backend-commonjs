@@ -246,10 +246,6 @@ export * from './collection';
 export * from './investor';
 export * from './peers';
 export * from './roles';
-<<<<<<< HEAD
 export * from "./resumes";
 export * from './utils';
-=======
-export * from './utils';
 export * from './middlewares/index';
->>>>>>> a3aac6dedb8a6fff39bcff17f0e536090e85ce75
