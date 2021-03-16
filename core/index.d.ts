@@ -135,7 +135,8 @@ export interface TransferDetails extends AmountLimitation {
     currency: string;
 }
 export interface CardDetails extends AmountLimitation {
-    curency: string;
+    currency: string;
+    country: string;
 }
 export interface CryptoCurrencyDetails extends AmountLimitation {
 }
@@ -152,6 +153,10 @@ export interface Method extends Indexable, Insertable, Patchable {
     details: MethodDetails;
 }
 export declare type TicketStatus = "pending" | "confirmed" | "cancelled" | "paid";
+export interface CardRechargeData {
+    holder: string;
+    identifier: string;
+}
 export interface Ticket extends Indexable {
     id: string;
     userId: string;
@@ -160,6 +165,7 @@ export interface Ticket extends Indexable {
     amount: number;
     rate: number;
     address: string;
+    card?: CardRechargeData;
     allowed: boolean;
     enableCommission: boolean;
     status: TicketStatus;
