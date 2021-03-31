@@ -149,7 +149,7 @@ export interface Method extends Indexable, Insertable, Patchable {
     color?: string;
     allowSell: boolean;
     allowBuy: boolean;
-    availableAmount: number;
+    availableAmount?: number;
     addedAt?: number;
     details: MethodDetails;
 }
