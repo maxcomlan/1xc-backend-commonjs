@@ -266,6 +266,10 @@ export interface WalletTransfer extends Insertable {
     sent: Money;
     received: Money;
     fees: Money;
+    proofs: {
+        sender: string; /// sender emission history ID
+        receiver: string; /// receiver reception history ID
+    }
     status: "completed";
 }
 
