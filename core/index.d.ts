@@ -213,6 +213,22 @@ export interface AccessToken extends Insertable, Patchable {
     owner: string;
     rules: string[];
 }
+export interface WalletTransfer extends Insertable {
+    sender: {
+        id: string;
+        wallet: string;
+        type: WalletType;
+    };
+    receiver: {
+        id: string;
+        wallet: string;
+        type: WalletType;
+    };
+    sent: Money;
+    received: Money;
+    fees: Money;
+    status: "completed";
+}
 export * from './Logger';
 export * from './clients';
 export * from './collection';
