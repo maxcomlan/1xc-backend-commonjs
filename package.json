@@ -1,6 +1,6 @@
 {
   "name": "1xc-backend-common",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "common properties of 1xc subsystems written in javascript/typescript",
   "scripts": {
     "test": "jest",
