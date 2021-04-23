@@ -213,7 +213,7 @@ export interface AccessToken extends Insertable, Patchable {
     owner: string;
     rules: string[];
 }
-export interface WalletTransfer extends Insertable {
+export interface WalletTransfer extends Indexable, Insertable {
     sender: {
         id: string;
         wallet: string;
