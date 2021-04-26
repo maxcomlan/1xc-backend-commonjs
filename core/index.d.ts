@@ -224,6 +224,7 @@ export interface WalletTransfer extends Indexable, Insertable {
         wallet: string;
         type: WalletType;
     };
+    appliedRate: number;
     sent: Money;
     received: Money;
     fees: Money;
