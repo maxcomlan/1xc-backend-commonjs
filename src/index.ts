@@ -272,6 +272,7 @@ export interface WalletTransfer extends Indexable, Insertable {
         receiver: string; /// receiver reception history ID
     }
     status: "completed";
+    reason?: string;
 }
 
 export * from './Logger';
