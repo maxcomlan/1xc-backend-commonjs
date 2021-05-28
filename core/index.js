@@ -18,4 +18,5 @@ __exportStar(require("./peers"), exports);
 __exportStar(require("./roles"), exports);
 __exportStar(require("./resumes"), exports);
 __exportStar(require("./utils"), exports);
+__exportStar(require("./pricing"), exports);
 __exportStar(require("./middlewares/index"), exports);
