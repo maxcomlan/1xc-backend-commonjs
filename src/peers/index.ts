@@ -29,6 +29,7 @@ export interface UserSESData extends TokenData{
 export interface UserUATData extends TokenData{
     type: "user";
     method: "uat";
+    mode?: "read" | "write" | "both";
     userId: string;
     firstName: string;
     lastName: string;

@@ -1,7 +1,7 @@
 import { Logger } from "../Logger";
 import { configureProxyAccess, IssuerClient, AdminServiceClient } from "../clients";
 import { ServiceMetadata, UserSESData, UserUATData } from "../peers";
-import { extractBearerToken } from "../utils";
+import { extractBearerToken, parseAuthorizationHeader } from "../utils";
 import { NextFunction, Request, Response } from "express-serve-static-core";
 
 export function userMiddlewareAuthenticator(logger: Logger, apiUrl: string, metadata: ServiceMetadata){
@@ -14,18 +14,17 @@ export function userMiddlewareAuthenticator(logger: Logger, apiUrl: string, meta
             }
             else if (auth) {
                 configureProxyAccess(apiUrl, metadata);
-    
-                let token = extractBearerToken(auth);
+                let { format, token } = ( parseAuthorizationHeader(auth) || {} ) as any;
                 if (!token) {
                     return next();
                 }
                 let issuerClient = new IssuerClient();
-                let data = await issuerClient.verify(token);
+                let data = await issuerClient.verify(token, format);
                 if (data && data.type) {
                     if (data.type === "user") {
                         req.peer = {
                             type: "user",
-                            data: data as (UserSESData | UserUATData)
+                            data: data as any
                         }
                     }
                     else if (data.type === "admin") {

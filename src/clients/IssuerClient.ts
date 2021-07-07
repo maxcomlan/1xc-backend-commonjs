@@ -30,9 +30,10 @@ export class IssuerClient extends ServiceClient{
         })
     }
 
-    async verify(token: string): Promise<KeyValue>{
+
+    async verify(token: string, format: "bearer"|"uat" = "bearer"): Promise<KeyValue>{
         return Axios.post(
-            `${this.url}/decode`,
+            `${this.url}/decode?format=${format}`,
             {token: token},
             {
                 headers:{
