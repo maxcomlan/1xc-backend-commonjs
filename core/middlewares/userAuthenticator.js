@@ -12,12 +12,12 @@ function userMiddlewareAuthenticator(logger, apiUrl, metadata) {
             }
             else if (auth) {
                 clients_1.configureProxyAccess(apiUrl, metadata);
-                let token = utils_1.extractBearerToken(auth);
+                let { format, token } = (utils_1.parseAuthorizationHeader(auth) || {});
                 if (!token) {
                     return next();
                 }
                 let issuerClient = new clients_1.IssuerClient();
-                let data = await issuerClient.verify(token);
+                let data = await issuerClient.verify(token, format);
                 if (data && data.type) {
                     if (data.type === "user") {
                         req.peer = {

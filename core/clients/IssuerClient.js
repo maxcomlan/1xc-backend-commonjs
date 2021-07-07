@@ -7,6 +7,8 @@ exports.IssuerClient = void 0;
 const ServiceClient_1 = require("./ServiceClient");
 const axios_1 = __importDefault(require("axios"));
 class IssuerClient extends ServiceClient_1.ServiceClient {
+    static clientMetadata;
+    static url;
     constructor() {
         super(IssuerClient.url, IssuerClient.clientMetadata);
     }
@@ -24,8 +26,8 @@ class IssuerClient extends ServiceClient_1.ServiceClient {
             return "";
         });
     }
-    async verify(token) {
-        return axios_1.default.post(`${this.url}/decode`, { token: token }, {
+    async verify(token, format = "bearer") {
+        return axios_1.default.post(`${this.url}/decode?format=${format}`, { token: token }, {
             headers: {
                 'Service-Name': this.access.name,
                 'Service-Signature': this.access.signature

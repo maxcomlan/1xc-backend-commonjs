@@ -6,6 +6,6 @@ export declare class IssuerClient extends ServiceClient {
     static url: string;
     constructor();
     sign(data: KeyValue): Promise<string>;
-    verify(token: string): Promise<KeyValue>;
+    verify(token: string, format?: "bearer" | "uat"): Promise<KeyValue>;
 }
 export default IssuerClient;

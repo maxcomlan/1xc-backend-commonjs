@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.JsonDocFilter = void 0;
 class JsonDocFilter {
+    filters;
+    combine;
     constructor(combine = "AND", ...filters) {
         this.filters = filters;
         this.combine = combine;

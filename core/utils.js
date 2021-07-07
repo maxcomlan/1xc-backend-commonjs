@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.extractBearerToken = exports.capitalize = exports.errors = exports.success = void 0;
+exports.parseAuthorizationHeader = exports.extractApiKey = exports.extractBearerToken = exports.capitalize = exports.errors = exports.success = void 0;
+const BEARER_EXP = RegExp("^bearer\\s+(?<token>.*)", "i");
+const UAT_EXP = RegExp("^uat\\s+(?<token>.*)", "i");
 function success(data = undefined) {
     let res = {
         success: true
@@ -27,11 +29,28 @@ function capitalize(str) {
 }
 exports.capitalize = capitalize;
 function extractBearerToken(str) {
-    let regexp = RegExp("^bearer\\s+(?<token>.*)", "i");
-    let result = regexp.exec(str);
+    let result = BEARER_EXP.exec(str);
     if (result && result.groups) {
         return result.groups.token;
     }
     return "";
 }
 exports.extractBearerToken = extractBearerToken;
+function extractApiKey(str) {
+    let result = UAT_EXP.exec(str);
+    if (result && result.groups) {
+        return result.groups.token;
+    }
+    return "";
+}
+exports.extractApiKey = extractApiKey;
+function parseAuthorizationHeader(str) {
+    if (BEARER_EXP.test(str)) {
+        return { format: "bearer", token: extractBearerToken(str) };
+    }
+    else if (UAT_EXP.test(str)) {
+        return { format: "uat", token: extractApiKey(str) };
+    }
+    return undefined;
+}
+exports.parseAuthorizationHeader = parseAuthorizationHeader;

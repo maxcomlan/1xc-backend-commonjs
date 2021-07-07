@@ -2,6 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Logger = void 0;
 class Logger {
+    client;
+    channel;
+    service;
     constructor(client, channel, service) {
         this.client = client;
         this.channel = channel;

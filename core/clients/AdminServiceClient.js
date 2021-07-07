@@ -7,6 +7,8 @@ exports.AdminServiceClient = void 0;
 const axios_1 = __importDefault(require("axios"));
 const JsonServiceClient_1 = require("./JsonServiceClient");
 class AdminServiceClient extends JsonServiceClient_1.JsonServiceClient {
+    static clientMetadata;
+    static url;
     constructor() {
         super(AdminServiceClient.url, AdminServiceClient.clientMetadata);
     }

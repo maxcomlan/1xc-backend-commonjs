@@ -7,6 +7,8 @@ exports.ConversionServiceClient = void 0;
 const axios_1 = __importDefault(require("axios"));
 const ServiceClient_1 = require("./ServiceClient");
 class ConversionServiceClient extends ServiceClient_1.ServiceClient {
+    static clientMetadata;
+    static url;
     constructor() {
         super(ConversionServiceClient.url, ConversionServiceClient.clientMetadata);
     }

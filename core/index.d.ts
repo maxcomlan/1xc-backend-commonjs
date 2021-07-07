@@ -222,8 +222,10 @@ export interface ExchangeCalculation {
     rateApplied: number;
 }
 export interface AccessToken extends Insertable, Patchable {
-    hash: string;
+    read: string;
+    write: string;
     owner: string;
+    label?: string;
     rules: string[];
 }
 export interface WalletTransfer extends Indexable, Insertable {
