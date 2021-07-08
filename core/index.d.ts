@@ -226,7 +226,7 @@ export interface AccessToken extends Insertable, Patchable {
     write: string;
     owner: string;
     label?: string;
-    rules: string[];
+    rights: string[];
 }
 export interface WalletTransfer extends Indexable, Insertable {
     sender: {

@@ -265,7 +265,7 @@ export interface AccessToken extends Insertable, Patchable{
     write: string; ///sha256 signature of the write part of the key
     owner: string; /// the user id
     label?: string;
-    rules: string[];
+    rights: string[];
 }
 
 export interface WalletTransfer extends Indexable, Insertable {
