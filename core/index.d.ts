@@ -224,6 +224,7 @@ export interface ExchangeCalculation {
 export interface AccessToken extends Insertable, Patchable {
     read: string;
     write: string;
+    hash: string;
     owner: string;
     label?: string;
     rights: string[];
