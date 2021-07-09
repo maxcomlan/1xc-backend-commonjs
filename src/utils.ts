@@ -1,5 +1,3 @@
-import { Customer, Wallet } from ".";
-import { UserResume, WalletResume } from "./resumes";
 
 const BEARER_EXP = RegExp("^bearer\\s+(?<token>.*)","i");
 const UAT_EXP = RegExp("^uat\\s+(?<token>.*)","i");
